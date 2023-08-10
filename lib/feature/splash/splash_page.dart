@@ -15,7 +15,6 @@ import 'package:weather/theme/default/default_no_app_bar.dart';
 import 'package:weather/theme/safe_area/safe_area_b16.dart';
 import 'package:weather/theme/text/text16/text_16_semi_bold.dart';
 
-// Project imports:
 @RoutePage()
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -65,9 +64,7 @@ class _SplashPageState extends State<SplashPage> with WidgetsBindingObserver {
 
               return Center(
                 child: MyText16s(
-                  isLoading
-                      ? MyStrings.updatingWeather
-                      : (isLoading ? MyStrings.updatingWeather : ''),
+                  isLoading ? MyStrings.updatingWeather : '',
                   textAlign: TextAlign.center,
                   color: MyColors.white,
                 ),

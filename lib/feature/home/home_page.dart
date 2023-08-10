@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
               backgroundColor: MyColors.white,
               appBar: HomeAppBar(),
               body: const HomeContent(),
-              resizeToAvoidBottomInset: false,
+              resizeToAvoidBottomInset: true,
               bottomNavigationBar: const HomeBottomNavigationBar(),
             ),
           ),

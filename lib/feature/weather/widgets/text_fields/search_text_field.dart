@@ -26,7 +26,7 @@ class _WeatherSearchFieldState extends State<WeatherSearchField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: MyEdgeInsets.all16.copyWith(bottom: 12),
+      padding: MyEdgeInsets.all16,
       child: SearchTextField(
         onChanged: onChanged,
         hintText: MyStrings.searchByCity,
