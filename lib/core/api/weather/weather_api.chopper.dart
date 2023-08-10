@@ -17,13 +17,15 @@ class _$WeatherApi extends WeatherApi {
   final definitionType = WeatherApi;
 
   @override
-  Future<Response<Weather>> fetchWeather({
+  Future<Response<WeatherData>> fetchWeather({
     String? cityName,
+    String? lang = 'ru',
     String? apiKey = apiKey,
   }) {
     final Uri $url = Uri.parse('data/2.5/weather');
     final Map<String, dynamic> $params = <String, dynamic>{
       'q': cityName,
+      'lang': lang,
       'appid': apiKey,
     };
     final Request $request = Request(
@@ -32,6 +34,6 @@ class _$WeatherApi extends WeatherApi {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Weather, Weather>($request);
+    return client.send<WeatherData, WeatherData>($request);
   }
 }

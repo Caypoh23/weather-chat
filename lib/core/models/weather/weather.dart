@@ -11,57 +11,30 @@ import 'package:weather/utils/icon_mapper.dart';
 part 'weather.g.dart';
 
 @CopyWith()
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: false)
 class Weather {
   //
-  @JsonKey()
-  final int id;
 
   @JsonKey()
-  final int time;
+  final int? id;
 
   @JsonKey()
-  final int sunrise;
+  final String? main;
 
   @JsonKey()
-  final int sunset;
+  final String? description;
 
-  @JsonKey()
-  final int humidity;
-
-  @JsonKey()
-  final String description;
-
-  @JsonKey()
-  final String iconCode;
-
-  @JsonKey()
-  final String main;
-
-  @JsonKey()
-  final String cityName;
-
-  @JsonKey()
-  final double windSpeed;
-
-  @JsonKey()
-  final List<Weather> forecast;
+  @JsonKey(name: 'icon')
+  final String? iconCode;
 
   //
-
-  Weather(
+  Weather({
     this.id,
-    this.time,
-    this.sunrise,
-    this.sunset,
-    this.humidity,
+    this.main,
     this.description,
     this.iconCode,
-    this.main,
-    this.cityName,
-    this.windSpeed,
-    this.forecast,
-  );
+  });
+
   //
 
   factory Weather.fromJson(Map<String, dynamic> json) =>

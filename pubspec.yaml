@@ -106,3 +106,8 @@ flutter:
           weight: 600
         - asset: assets/fonts/Gilroy-Bold.ttf
           weight: 700
+
+    - family: WeatherIcons
+      fonts:
+        - asset: assets/fonts/weathericons-regular.ttf
+          weight: 400

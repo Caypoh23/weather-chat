@@ -2,20 +2,21 @@
 import 'package:redux/redux.dart';
 
 // Project imports:
-import 'package:weather/core/models/weather/weather.dart';
+import 'package:weather/core/models/weather/data/weather_data.dart';
 import 'actions.dart';
 import 'store.dart';
 
 //
 
-Weather? _updateItemReducer(Weather? weather, UpdateWeatherAction action) =>
+WeatherData? _updateItemReducer(
+        WeatherData? weather, UpdateWeatherAction action) =>
     action.weather;
 
-Weather? _stateItemByIdReducer(Weather? weather, action) => weather;
+WeatherData? _stateItemByIdReducer(WeatherData? weather, action) => weather;
 
-Reducer<Weather?> _itemByIdReducer = combineReducers<Weather?>([
-  TypedReducer<Weather?, UpdateWeatherAction>(_updateItemReducer),
-  TypedReducer<Weather?, dynamic>(_stateItemByIdReducer),
+Reducer<WeatherData?> _itemByIdReducer = combineReducers<WeatherData?>([
+  TypedReducer<WeatherData?, UpdateWeatherAction>(_updateItemReducer),
+  TypedReducer<WeatherData?, dynamic>(_stateItemByIdReducer),
 ]);
 
 String _searchTextReducer(String searchText, action) =>

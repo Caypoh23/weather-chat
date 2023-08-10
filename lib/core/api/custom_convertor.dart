@@ -5,12 +5,12 @@ import 'dart:async';
 import 'package:chopper/chopper.dart';
 
 // Project imports:
-import 'package:weather/core/models/weather/weather.dart';
+import 'package:weather/core/models/weather/data/weather_data.dart';
 
 typedef JsonFactory<T> = T Function(Map<String, dynamic> json);
 
 const factories = {
-  Weather: Weather.fromJson,
+  WeatherData: WeatherData.fromJson,
   //
 };
 
@@ -18,7 +18,7 @@ class MyJsonConverter extends JsonConverter {
   //
   @override
   FutureOr<Response<B>> convertResponse<B, T>(Response response) async {
-    // use [JsonConverter] to decode json
+    /// use [JsonConverter] to decode json
     final jsonRes = await super.convertResponse(response);
     return jsonRes.copyWith<B>(body: _decode<T>(jsonRes.body));
   }

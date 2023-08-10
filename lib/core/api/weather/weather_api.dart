@@ -3,7 +3,7 @@ import 'package:chopper/chopper.dart';
 
 // Project imports:
 import 'package:weather/conf/api/url_constants.dart';
-import 'package:weather/core/models/weather/weather.dart';
+import 'package:weather/core/models/weather/data/weather_data.dart';
 
 part 'weather_api.chopper.dart';
 
@@ -12,8 +12,9 @@ abstract class WeatherApi extends ChopperService {
   static WeatherApi create([ChopperClient? client]) => _$WeatherApi(client);
 
   @Get()
-  Future<Response<Weather>> fetchWeather({
+  Future<Response<WeatherData>> fetchWeather({
     @Query('q') String? cityName,
+    @Query() String? lang = 'ru',
     @Query('appid') String? apiKey = apiKey,
   });
 }

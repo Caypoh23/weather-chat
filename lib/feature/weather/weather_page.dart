@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:weather/utils/location_helper.dart';
 import 'widgets/content.dart';
 
 class WeatherPage extends StatefulWidget {
@@ -14,12 +13,6 @@ class WeatherPage extends StatefulWidget {
 
 class _WeatherPageState extends State<WeatherPage> {
   //
-  @override
-  void initState() {
-    MyLocationHelper.getCurrentLocation();
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return const WeatherContent();

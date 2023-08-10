@@ -3,7 +3,7 @@ import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
 
 // Project imports:
-import 'package:weather/core/models/weather/weather.dart';
+import 'package:weather/core/models/weather/data/weather_data.dart';
 import 'actions.dart';
 import 'store.dart';
 
@@ -20,9 +20,9 @@ class WeatherService {
 
   //
 
-  final _weather = BehaviorSubject<Weather?>();
-  BehaviorSubject<Weather?> get weather$ => _weather;
-  Weather? get weather => weather$.valueOrNull;
+  final _weather = BehaviorSubject<WeatherData?>();
+  BehaviorSubject<WeatherData?> get weather$ => _weather;
+  WeatherData? get weather => weather$.valueOrNull;
 
   //
 

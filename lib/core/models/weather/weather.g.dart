@@ -7,27 +7,13 @@ part of 'weather.dart';
 // **************************************************************************
 
 abstract class _$WeatherCWProxy {
-  Weather id(int id);
+  Weather id(int? id);
 
-  Weather time(int time);
+  Weather main(String? main);
 
-  Weather sunrise(int sunrise);
+  Weather description(String? description);
 
-  Weather sunset(int sunset);
-
-  Weather humidity(int humidity);
-
-  Weather description(String description);
-
-  Weather iconCode(String iconCode);
-
-  Weather main(String main);
-
-  Weather cityName(String cityName);
-
-  Weather windSpeed(double windSpeed);
-
-  Weather forecast(List<Weather> forecast);
+  Weather iconCode(String? iconCode);
 
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `Weather(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
@@ -37,16 +23,9 @@ abstract class _$WeatherCWProxy {
   /// ````
   Weather call({
     int? id,
-    int? time,
-    int? sunrise,
-    int? sunset,
-    int? humidity,
+    String? main,
     String? description,
     String? iconCode,
-    String? main,
-    String? cityName,
-    double? windSpeed,
-    List<Weather>? forecast,
   });
 }
 
@@ -57,37 +36,16 @@ class _$WeatherCWProxyImpl implements _$WeatherCWProxy {
   final Weather _value;
 
   @override
-  Weather id(int id) => this(id: id);
+  Weather id(int? id) => this(id: id);
 
   @override
-  Weather time(int time) => this(time: time);
+  Weather main(String? main) => this(main: main);
 
   @override
-  Weather sunrise(int sunrise) => this(sunrise: sunrise);
+  Weather description(String? description) => this(description: description);
 
   @override
-  Weather sunset(int sunset) => this(sunset: sunset);
-
-  @override
-  Weather humidity(int humidity) => this(humidity: humidity);
-
-  @override
-  Weather description(String description) => this(description: description);
-
-  @override
-  Weather iconCode(String iconCode) => this(iconCode: iconCode);
-
-  @override
-  Weather main(String main) => this(main: main);
-
-  @override
-  Weather cityName(String cityName) => this(cityName: cityName);
-
-  @override
-  Weather windSpeed(double windSpeed) => this(windSpeed: windSpeed);
-
-  @override
-  Weather forecast(List<Weather> forecast) => this(forecast: forecast);
+  Weather iconCode(String? iconCode) => this(iconCode: iconCode);
 
   @override
 
@@ -99,62 +57,27 @@ class _$WeatherCWProxyImpl implements _$WeatherCWProxy {
   /// ````
   Weather call({
     Object? id = const $CopyWithPlaceholder(),
-    Object? time = const $CopyWithPlaceholder(),
-    Object? sunrise = const $CopyWithPlaceholder(),
-    Object? sunset = const $CopyWithPlaceholder(),
-    Object? humidity = const $CopyWithPlaceholder(),
+    Object? main = const $CopyWithPlaceholder(),
     Object? description = const $CopyWithPlaceholder(),
     Object? iconCode = const $CopyWithPlaceholder(),
-    Object? main = const $CopyWithPlaceholder(),
-    Object? cityName = const $CopyWithPlaceholder(),
-    Object? windSpeed = const $CopyWithPlaceholder(),
-    Object? forecast = const $CopyWithPlaceholder(),
   }) {
     return Weather(
-      id == const $CopyWithPlaceholder() || id == null
+      id: id == const $CopyWithPlaceholder()
           ? _value.id
           // ignore: cast_nullable_to_non_nullable
-          : id as int,
-      time == const $CopyWithPlaceholder() || time == null
-          ? _value.time
-          // ignore: cast_nullable_to_non_nullable
-          : time as int,
-      sunrise == const $CopyWithPlaceholder() || sunrise == null
-          ? _value.sunrise
-          // ignore: cast_nullable_to_non_nullable
-          : sunrise as int,
-      sunset == const $CopyWithPlaceholder() || sunset == null
-          ? _value.sunset
-          // ignore: cast_nullable_to_non_nullable
-          : sunset as int,
-      humidity == const $CopyWithPlaceholder() || humidity == null
-          ? _value.humidity
-          // ignore: cast_nullable_to_non_nullable
-          : humidity as int,
-      description == const $CopyWithPlaceholder() || description == null
-          ? _value.description
-          // ignore: cast_nullable_to_non_nullable
-          : description as String,
-      iconCode == const $CopyWithPlaceholder() || iconCode == null
-          ? _value.iconCode
-          // ignore: cast_nullable_to_non_nullable
-          : iconCode as String,
-      main == const $CopyWithPlaceholder() || main == null
+          : id as int?,
+      main: main == const $CopyWithPlaceholder()
           ? _value.main
           // ignore: cast_nullable_to_non_nullable
-          : main as String,
-      cityName == const $CopyWithPlaceholder() || cityName == null
-          ? _value.cityName
+          : main as String?,
+      description: description == const $CopyWithPlaceholder()
+          ? _value.description
           // ignore: cast_nullable_to_non_nullable
-          : cityName as String,
-      windSpeed == const $CopyWithPlaceholder() || windSpeed == null
-          ? _value.windSpeed
+          : description as String?,
+      iconCode: iconCode == const $CopyWithPlaceholder()
+          ? _value.iconCode
           // ignore: cast_nullable_to_non_nullable
-          : windSpeed as double,
-      forecast == const $CopyWithPlaceholder() || forecast == null
-          ? _value.forecast
-          // ignore: cast_nullable_to_non_nullable
-          : forecast as List<Weather>,
+          : iconCode as String?,
     );
   }
 }
@@ -170,31 +93,15 @@ extension $WeatherCopyWith on Weather {
 // **************************************************************************
 
 Weather _$WeatherFromJson(Map<String, dynamic> json) => Weather(
-      json['id'] as int,
-      json['time'] as int,
-      json['sunrise'] as int,
-      json['sunset'] as int,
-      json['humidity'] as int,
-      json['description'] as String,
-      json['iconCode'] as String,
-      json['main'] as String,
-      json['cityName'] as String,
-      (json['windSpeed'] as num).toDouble(),
-      (json['forecast'] as List<dynamic>)
-          .map((e) => Weather.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      id: json['id'] as int?,
+      main: json['main'] as String?,
+      description: json['description'] as String?,
+      iconCode: json['icon'] as String?,
     );
 
 Map<String, dynamic> _$WeatherToJson(Weather instance) => <String, dynamic>{
       'id': instance.id,
-      'time': instance.time,
-      'sunrise': instance.sunrise,
-      'sunset': instance.sunset,
-      'humidity': instance.humidity,
-      'description': instance.description,
-      'iconCode': instance.iconCode,
       'main': instance.main,
-      'cityName': instance.cityName,
-      'windSpeed': instance.windSpeed,
-      'forecast': instance.forecast.map((e) => e.toJson()).toList(),
+      'description': instance.description,
+      'icon': instance.iconCode,
     };

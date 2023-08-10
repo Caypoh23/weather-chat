@@ -2,14 +2,14 @@
 import 'package:injectable/injectable.dart';
 
 // Project imports:
-import 'package:weather/core/models/weather/weather.dart';
+import 'package:weather/core/models/weather/data/weather_data.dart';
 import 'package:weather/core/root/observable_store.dart';
 import 'middleware.dart';
 import 'reducers.dart';
 
 class WeatherState extends ObservableState {
   //
-  final Weather? weather;
+  final WeatherData? weather;
   final String searchText;
 
   final dynamic action;

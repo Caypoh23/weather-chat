@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:weather/conf/values/duration_constants.dart';
+import 'package:weather/conf/values/edge_insets_constants.dart';
 import 'package:weather/conf/values/strings_constants.dart';
 import 'package:weather/core/root/injector.dart';
 import 'package:weather/feature/weather/redux/service.dart';
@@ -24,9 +25,12 @@ class _WeatherSearchFieldState extends State<WeatherSearchField> {
 
   @override
   Widget build(BuildContext context) {
-    return SearchTextField(
-      onChanged: onChanged,
-      hintText: MyStrings.searchByCity,
+    return Padding(
+      padding: MyEdgeInsets.all16.copyWith(bottom: 12),
+      child: SearchTextField(
+        onChanged: onChanged,
+        hintText: MyStrings.searchByCity,
+      ),
     );
   }
 
@@ -34,7 +38,7 @@ class _WeatherSearchFieldState extends State<WeatherSearchField> {
     injector<WeatherService>().search(search);
 
     timer?.cancel();
-    timer = Timer.periodic(MyDurations.ms400, (timer) {
+    timer = Timer.periodic(MyDurations.ms500, (timer) {
       injector<WeatherService>().fetch();
       timer.cancel();
     });

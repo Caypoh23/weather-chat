@@ -1,7 +1,7 @@
 // Project imports:
 
 // Project imports:
-import 'package:weather/core/models/weather/weather.dart';
+import 'package:weather/core/models/weather/data/weather_data.dart';
 
 class FetchWeatherAction {}
 
@@ -12,7 +12,7 @@ class SearchWeatherAction {
 }
 
 class UpdateWeatherAction {
-  final Weather weather;
+  final WeatherData weather;
 
   UpdateWeatherAction(this.weather);
 }
