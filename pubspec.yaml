@@ -1,0 +1,103 @@
+name: weather
+description: Simple weather app with chat.
+
+publish_to: "none"
+#* Flutter v3.10.6
+
+version: 1.0.0+1
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  badges: ^3.1.1
+  flash: ^3.0.5+1
+  shimmer: ^3.0.0
+  readmore: ^2.2.0
+  photo_view: ^0.14.0
+  flutter_svg: ^1.1.6
+  in_date_utils: ^1.2.0+2
+  pull_to_refresh: ^2.0.0
+  lazy_load_scrollview: ^1.3.0
+  cached_network_image: ^3.2.2
+  mask_text_input_formatter: ^2.4.0
+
+  flutter_multi_formatter: ^2.7.4
+  native_flutter_proxy: ^0.1.15
+  permission_handler: ^10.2.0
+  copy_with_extension: ^5.0.3
+  shared_preferences: ^2.0.15
+  package_info_plus: ^4.0.2
+  url_launcher: ^6.1.6
+  collection: ^1.16.0
+  logging: ^1.2.0
+  dartx: ^1.1.0
+  http: any
+  intl: any
+
+  easy_localization: ^3.0.1
+  easy_localization_loader: ^1.0.0
+
+  chopper: ^6.1.4
+  equatable: ^2.0.5
+  json_annotation: ^4.8.0
+  connectivity_plus: ^2.3.9
+
+  get_it: ^7.2.0
+  rxdart: ^0.27.7
+  provider: ^6.0.4
+  injectable: ^2.1.0
+
+  mobx: ^2.1.3
+  flutter_mobx: ^2.0.6+5
+
+  redux: ^5.0.0
+
+dev_dependencies:
+  copy_with_extension_gen: ^5.0.2
+  flutter_launcher_icons: ^0.12.0
+  injectable_generator: ^2.1.3
+  chopper_generator: ^6.0.1
+  json_serializable: ^6.5.4
+  import_sorter: ^4.6.0
+  build_runner: ^2.3.2
+  mobx_codegen: ^2.1.1
+
+  flutter_lints: ^2.0.0
+
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  image_path: "assets/images/app_icon.jpg"
+  android: true
+  ios: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+    - assets/icons/
+
+    - assets/icons/common/
+    - assets/icons/main/
+
+    - assets/images/
+
+    - assets/translations/
+
+  fonts:
+    - family: Golos
+      fonts:
+        - asset: assets/fonts/Golos-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Golos-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Golos-Semi-Bold.ttf
+          weight: 600
+        - asset: assets/fonts/Golos-Bold.ttf
+          weight: 700
