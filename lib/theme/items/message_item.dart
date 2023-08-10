@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:weather/conf/assets/icon_constants.dart';
-import 'package:weather/conf/enums/theme_colors_enum.dart';
 import 'package:weather/conf/values/border_radius_constants.dart';
 import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/conf/values/edge_insets_constants.dart';
@@ -89,7 +88,7 @@ class MessageItem extends StatelessWidget {
                         borderRadius: MyBorderRadius.allRounded100,
                         child: MyText12m(
                           '$unreadMessageCount',
-                          color: MyThemeColor.white,
+                          color: MyColors.white,
                           textAlign: TextAlign.center,
                         ),
                       ),

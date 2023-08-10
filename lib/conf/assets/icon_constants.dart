@@ -27,4 +27,17 @@ class MyIcons {
   static const search = '${MyAssets.icCommon}/search.svg';
 
   static const bellFilled = '${MyAssets.icCommon}/bell_filled.svg';
+
+  ///
+  /// Menu
+  ///
+
+  static const docsOn = '${MyAssets.icMenu}/docs_on.svg';
+  static const docsOff = '${MyAssets.icMenu}/docs_off.svg';
+  static const homeOn = '${MyAssets.icMenu}/home_on.svg';
+  static const homeOff = '${MyAssets.icMenu}/home_off.svg';
+  static const profileOn = '${MyAssets.icMenu}/profile_on.svg';
+  static const profileOff = '${MyAssets.icMenu}/profile_off.svg';
+  static const financesOn = '${MyAssets.icMenu}/finances_on.svg';
+  static const financesOff = '${MyAssets.icMenu}/finances_off.svg';
 }

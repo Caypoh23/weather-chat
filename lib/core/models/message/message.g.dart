@@ -11,7 +11,11 @@ abstract class _$MessageCWProxy {
 
   Message text(String? text);
 
-  Message senderId(String? senderId);
+  Message isOwn(bool isOwn);
+
+  Message isRead(bool isRead);
+
+  Message chatId(String? chatId);
 
   Message name(String? name);
 
@@ -28,7 +32,9 @@ abstract class _$MessageCWProxy {
   Message call({
     String? id,
     String? text,
-    String? senderId,
+    bool? isOwn,
+    bool? isRead,
+    String? chatId,
     String? name,
     String? avatar,
     DateTime? sentTime,
@@ -48,7 +54,13 @@ class _$MessageCWProxyImpl implements _$MessageCWProxy {
   Message text(String? text) => this(text: text);
 
   @override
-  Message senderId(String? senderId) => this(senderId: senderId);
+  Message isOwn(bool isOwn) => this(isOwn: isOwn);
+
+  @override
+  Message isRead(bool isRead) => this(isRead: isRead);
+
+  @override
+  Message chatId(String? chatId) => this(chatId: chatId);
 
   @override
   Message name(String? name) => this(name: name);
@@ -70,7 +82,9 @@ class _$MessageCWProxyImpl implements _$MessageCWProxy {
   Message call({
     Object? id = const $CopyWithPlaceholder(),
     Object? text = const $CopyWithPlaceholder(),
-    Object? senderId = const $CopyWithPlaceholder(),
+    Object? isOwn = const $CopyWithPlaceholder(),
+    Object? isRead = const $CopyWithPlaceholder(),
+    Object? chatId = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
     Object? avatar = const $CopyWithPlaceholder(),
     Object? sentTime = const $CopyWithPlaceholder(),
@@ -84,10 +98,18 @@ class _$MessageCWProxyImpl implements _$MessageCWProxy {
           ? _value.text
           // ignore: cast_nullable_to_non_nullable
           : text as String?,
-      senderId: senderId == const $CopyWithPlaceholder()
-          ? _value.senderId
+      isOwn: isOwn == const $CopyWithPlaceholder() || isOwn == null
+          ? _value.isOwn
           // ignore: cast_nullable_to_non_nullable
-          : senderId as String?,
+          : isOwn as bool,
+      isRead: isRead == const $CopyWithPlaceholder() || isRead == null
+          ? _value.isRead
+          // ignore: cast_nullable_to_non_nullable
+          : isRead as bool,
+      chatId: chatId == const $CopyWithPlaceholder()
+          ? _value.chatId
+          // ignore: cast_nullable_to_non_nullable
+          : chatId as String?,
       name: name == const $CopyWithPlaceholder()
           ? _value.name
           // ignore: cast_nullable_to_non_nullable
@@ -117,7 +139,9 @@ extension $MessageCopyWith on Message {
 Message _$MessageFromJson(Map<String, dynamic> json) => Message(
       id: json['id'] as String?,
       text: json['text'] as String?,
-      senderId: json['senderId'] as String?,
+      isOwn: json['isOwn'] as bool? ?? false,
+      isRead: json['isRead'] as bool? ?? false,
+      chatId: json['chatId'] as String?,
       name: json['name'] as String?,
       avatar: json['avatar'] as String?,
       sentTime: Message._datefromJson(json['sentTime'] as String?),
@@ -125,8 +149,10 @@ Message _$MessageFromJson(Map<String, dynamic> json) => Message(
 
 Map<String, dynamic> _$MessageToJson(Message instance) => <String, dynamic>{
       'id': instance.id,
+      'chatId': instance.chatId,
+      'isOwn': instance.isOwn,
+      'isRead': instance.isRead,
       'text': instance.text,
-      'senderId': instance.senderId,
       'name': instance.name,
       'avatar': instance.avatar,
       'sentTime': Message._dateToJson(instance.sentTime),

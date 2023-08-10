@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:weather/conf/assets/icon_constants.dart';
-import 'package:weather/conf/enums/theme_colors_enum.dart';
 import 'package:weather/conf/values/border_radius_constants.dart';
+import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/conf/values/edge_insets_constants.dart';
 import 'package:weather/theme/default/default_container.dart';
 import 'package:weather/theme/default/default_gesture.dart';
@@ -24,7 +24,8 @@ class BaseDetail extends StatelessWidget {
   final void Function() onClose;
   final void Function()? onTap;
 
-  const BaseDetail({super.key, 
+  const BaseDetail({
+    super.key,
     required this.icon,
     required this.title,
     required this.description,
@@ -63,14 +64,14 @@ class BaseDetail extends StatelessWidget {
                   children: [
                     MyText16m(
                       title,
-                      color: MyThemeColor.neutral,
+                      color: MyColors.neutral,
                     ),
                     if (description.isNotEmpty) ...[
                       const SizedBox(height: 8),
                       MyText14(
                         description,
                         isOverflow: false,
-                        color: MyThemeColor.neutral,
+                        color: MyColors.neutral,
                       ),
                     ],
                   ],

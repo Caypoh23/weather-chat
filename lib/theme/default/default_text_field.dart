@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 
 // Project imports:
 import 'package:weather/conf/assets/icon_constants.dart';
-import 'package:weather/conf/enums/theme_colors_enum.dart';
 import 'package:weather/conf/values/border_radius_constants.dart';
 import 'package:weather/conf/values/box_constraints_constants.dart';
 import 'package:weather/conf/values/color_constants.dart';
@@ -157,7 +156,7 @@ class _MyTextFieldState extends State<MyTextField> {
                 MyText14(
                   widget.labelText!,
                   height: 14,
-                  color: MyThemeColor.neutralVarient,
+                  color: MyColors.neutral,
                 ),
               ],
               if (widget.isLoading) ...[

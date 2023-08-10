@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:weather/conf/enums/theme_colors_enum.dart';
+import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/conf/values/font_constants.dart';
 import 'default_shrimmer.dart';
 
@@ -13,7 +13,7 @@ class MyText extends StatelessWidget {
   final int height;
   final int fontSize;
 
-  final MyThemeColor? color;
+  final Color? color;
 
   final int? maxLines;
   final TextAlign? textAlign;
@@ -29,11 +29,12 @@ class MyText extends StatelessWidget {
   ///
 
   const MyText(
-    this.data, {super.key, 
+    this.data, {
+    super.key,
     height,
     this.fontSize = 14,
     //
-    this.color = MyThemeColor.black,
+    this.color = MyColors.black,
     //
     this.maxLines,
     this.textAlign,
@@ -66,7 +67,7 @@ class MyText extends StatelessWidget {
     return Text(
       displayedText,
       style: TextStyle(
-        color: color?.color,
+        color: color,
         fontWeight: fontWeight,
         decoration: decoration,
         fontFamily: MyFonts.main,

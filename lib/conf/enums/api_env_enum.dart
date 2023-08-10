@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart' show kDebugMode;
 
 enum Env { prod, dev, mock }
 
-const String _domain = '.com';
+const String _domain = 'openweathermap.org';
 
 extension EnvExtension on Env {
   //

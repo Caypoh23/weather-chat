@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:weather/conf/enums/theme_colors_enum.dart';
 import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/conf/values/edge_insets_constants.dart';
 import 'package:weather/conf/values/space.dart';
@@ -25,7 +24,7 @@ class ChatDetailsContent extends StatelessWidget {
       children: [
         MyText14(
           '${MyStrings.offline}: 2 часа',
-          color: MyThemeColor.blackA50,
+          color: MyColors.blackA50,
         ),
         Space.v12,
         MyInkWell(
@@ -34,7 +33,7 @@ class ChatDetailsContent extends StatelessWidget {
           color: MyColors.neutralLite,
           child: MyText16m(
             MyStrings.openTemper,
-            color: MyThemeColor.neutralDarkVarient,
+            color: MyColors.neutralDarkVarient,
           ),
         ),
         Expanded(

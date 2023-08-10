@@ -1,5 +1,7 @@
 // Project imports:
-import 'theme_colors_enum.dart';
+import 'dart:ui';
+
+import 'package:weather/conf/values/color_constants.dart';
 
 enum CupertinoActionType {
   standard,
@@ -11,20 +13,20 @@ enum CupertinoActionType {
 
 extension CupertinoActionTypeExtension on CupertinoActionType {
   //
-  MyThemeColor get textColor {
+  Color get textColor {
     switch (this) {
       case CupertinoActionType.skip:
       case CupertinoActionType.cancel:
-        return MyThemeColor.neutralVarient;
+        return MyColors.neutral;
 
       case CupertinoActionType.destructive:
-        return MyThemeColor.error;
+        return MyColors.error;
 
       case CupertinoActionType.primary:
-        return MyThemeColor.primary;
+        return MyColors.primary;
 
       default:
-        return MyThemeColor.neutral;
+        return MyColors.neutral;
     }
   }
 }

@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:weather/conf/enums/theme_colors_enum.dart';
 import 'package:weather/theme/default/default_text.dart';
 
 class MyText12m extends StatelessWidget {
@@ -11,7 +10,7 @@ class MyText12m extends StatelessWidget {
 
   final int height;
 
-  final MyThemeColor? color;
+  final Color? color;
 
   final int? maxLines;
   final TextAlign? textAlign;

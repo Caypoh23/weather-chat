@@ -7,6 +7,7 @@ class MyAssets {
 
   static const icMain = '$icons/main';
   static const icCommon = '$icons/common';
+  static const icMenu = '$icons/menu';
 
   // Images
   static const images = '$assets/images';

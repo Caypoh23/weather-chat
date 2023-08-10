@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:weather/conf/enums/cupertino_action_type_enum.dart';
 import 'package:weather/conf/values/strings_constants.dart';
 import 'package:weather/core/root/injector.dart';
-import 'package:weather/core/root/navigator_service.dart';
+import 'package:weather/core/router/navigator_service.dart';
 import 'package:weather/theme/text/text16/text_16_medium.dart';
 
 class MyCupertinoActionSheetAction extends StatelessWidget {
@@ -14,7 +14,8 @@ class MyCupertinoActionSheetAction extends StatelessWidget {
   final void Function() onPressed;
   final CupertinoActionType type;
 
-  const MyCupertinoActionSheetAction({super.key, 
+  const MyCupertinoActionSheetAction({
+    super.key,
     required this.label,
     required this.onPressed,
     this.type = CupertinoActionType.standard,

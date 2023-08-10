@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:weather/conf/enums/theme_colors_enum.dart';
 import 'package:weather/conf/values/border_radius_constants.dart';
+import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/conf/values/duration_constants.dart';
 import 'package:weather/conf/values/edge_insets_constants.dart';
 import 'package:weather/theme/text/text16/text_16_medium.dart';
@@ -13,7 +13,7 @@ import 'default_progress_indicator.dart';
 class MyButton extends StatelessWidget {
   //
   final String label;
-  final MyThemeColor color;
+  final Color color;
 
   final void Function()? onTap;
   final void Function()? onLongPress;
@@ -27,7 +27,8 @@ class MyButton extends StatelessWidget {
   final bool enable;
   final bool isLoading;
 
-  const MyButton.primary({super.key, 
+  const MyButton.primary({
+    super.key,
     required this.label,
     required this.onTap,
     this.onLongPress,
@@ -40,9 +41,10 @@ class MyButton extends StatelessWidget {
     //
     this.enable = true,
     this.isLoading = false,
-  }) : color = MyThemeColor.primary;
+  }) : color = MyColors.primary;
 
-  const MyButton.secondary({super.key, 
+  const MyButton.secondary({
+    super.key,
     required this.label,
     required this.onTap,
     this.onLongPress,
@@ -55,7 +57,7 @@ class MyButton extends StatelessWidget {
     //
     this.isLoading = false,
     this.enable = true,
-  }) : color = MyThemeColor.secondary;
+  }) : color = MyColors.secondary;
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +68,7 @@ class MyButton extends StatelessWidget {
         padding: padding,
         borderRadius: MyBorderRadius.allRounded10,
         onTap: enable && !isLoading ? onTap : null,
-        color: enable || isLoading ? color.color : color.disabledColor,
+        color: enable || isLoading ? color : color,
         child: Stack(
           children: [
             if (!isLoading)
@@ -92,7 +94,7 @@ class MyButton extends StatelessWidget {
               Center(
                 child: MyProgressIndicator(
                   size: 20,
-                  color: color.color,
+                  color: color,
                 ),
               ),
           ],

@@ -1,20 +1,22 @@
 // Flutter imports:
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:weather/conf/values/color_constants.dart';
-import 'package:weather/core/models/message/message.dart';
+import 'package:weather/core/models/chat/chat.dart';
 import 'package:weather/theme/default/default_app_bar.dart';
 import 'package:weather/theme/gestures/focus_remover.dart';
 import 'widgets/content.dart';
 
+@RoutePage()
 class ChatDetailsPage extends StatefulWidget {
   //
-  final Message message;
+  final Chat chat;
 
   const ChatDetailsPage({
     super.key,
-    required this.message,
+    required this.chat,
   });
 
   @override
@@ -28,7 +30,7 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
       child: Scaffold(
         backgroundColor: MyColors.white,
         appBar: MyAppBar(
-          title: widget.message.name!,
+          title: widget.chat.messages!.last.name!,
         ),
         body: const ChatDetailsContent(),
       ),

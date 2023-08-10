@@ -24,6 +24,7 @@ dependencies:
   cached_network_image: ^3.2.2
   mask_text_input_formatter: ^2.4.0
 
+  flutter_keyboard_visibility: ^5.4.1
   flutter_multi_formatter: ^2.7.4
   native_flutter_proxy: ^0.1.15
   substring_kmp_search: ^0.0.3
@@ -33,6 +34,7 @@ dependencies:
   sticky_headers: ^0.3.0+2
   url_launcher: ^6.1.6
   collection: ^1.16.0
+  auto_route: ^7.8.0
   logging: ^1.2.0
   dartx: ^1.1.0
   http: any
@@ -86,6 +88,7 @@ flutter:
 
     - assets/icons/common/
     - assets/icons/main/
+    - assets/icons/menu/
 
     - assets/images/
 

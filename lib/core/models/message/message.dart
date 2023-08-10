@@ -14,10 +14,16 @@ class Message {
   final String? id;
 
   @JsonKey()
-  final String? text;
+  final String? chatId;
 
   @JsonKey()
-  final String? senderId;
+  final bool isOwn;
+
+  @JsonKey()
+  final bool isRead;
+
+  @JsonKey()
+  final String? text;
 
   @JsonKey()
   final String? name;
@@ -38,7 +44,9 @@ class Message {
   Message({
     this.id,
     this.text,
-    this.senderId,
+    this.isOwn = false,
+    this.isRead = false,
+    this.chatId,
     this.name,
     this.avatar,
     this.sentTime,
