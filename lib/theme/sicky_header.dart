@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 
 // Project imports:
+import 'package:weather/conf/enums/theme_colors_enum.dart';
 import 'package:weather/conf/values/edge_insets_constants.dart';
+import 'package:weather/theme/text/text16/text_16_semi_bold.dart';
 import 'package:weather/utils/date_formatter.dart';
-
 import 'default/default_container.dart';
-import 'text/text16/text_16_medium.dart';
 
 class StickyDateHeader extends StatelessWidget {
   //
@@ -29,9 +29,10 @@ class StickyDateHeader extends StatelessWidget {
       content: child,
       header: MyContainer(
         padding: MyEdgeInsets.top16,
-        alignment: Alignment.centerLeft,
-        child: MyText16m(
+        alignment: Alignment.center,
+        child: MyText16s(
           MyDateFormatter.fdMMMM(date),
+          color: MyThemeColor.neutralDark,
         ),
       ),
     );

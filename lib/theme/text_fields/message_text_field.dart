@@ -8,8 +8,10 @@ import 'package:mobx/mobx.dart';
 // Project imports:
 import 'package:weather/conf/assets/icon_constants.dart';
 import 'package:weather/conf/values/edge_insets_constants.dart';
+import 'package:weather/conf/values/space.dart';
 import 'package:weather/conf/values/strings_constants.dart';
 import 'package:weather/theme/default/default_container.dart';
+import 'package:weather/theme/default/default_gesture.dart';
 import 'package:weather/theme/default/default_icon.dart';
 
 class BottomChatTextField extends StatefulWidget {
@@ -43,14 +45,21 @@ class _BottomChatTextFieldState extends State<BottomChatTextField> {
             children: [
               Row(
                 children: [
-                  IconButton(
-                    icon: const MyIcon(icon: MyIcons.pin),
-                    onPressed: () {},
+                  Space.h24,
+                  MyGestureDetector(
+                    child: const MyIcon(
+                      icon: MyIcons.pin,
+                    ),
+                    onTap: () {},
                   ),
-                  IconButton(
-                    icon: const MyIcon(icon: MyIcons.record),
-                    onPressed: () {},
+                  Space.h18,
+                  MyGestureDetector(
+                    child: const MyIcon(
+                      icon: MyIcons.record,
+                    ),
+                    onTap: () {},
                   ),
+                  Space.h24,
                   Expanded(
                     child: Padding(
                       padding: MyEdgeInsets.zero,

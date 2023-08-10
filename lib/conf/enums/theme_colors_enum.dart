@@ -13,6 +13,8 @@ enum MyThemeColor {
   black,
   blackA50,
   neutral,
+  neutralDark,
+  neutralDarkVarient,
   neutralVarient,
   //
   warning,
@@ -40,6 +42,12 @@ extension MyThemeColorExtension on MyThemeColor {
 
       case MyThemeColor.neutral:
         return MyColors.neutral;
+
+      case MyThemeColor.neutralDark:
+        return MyColors.neutralDark;
+
+      case MyThemeColor.neutralDarkVarient:
+        return MyColors.neutralDarkVarient;
 
       case MyThemeColor.neutralVarient:
         return MyColors.neutralDark;

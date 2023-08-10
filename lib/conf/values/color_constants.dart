@@ -66,6 +66,13 @@ class MyColors {
   static const neutralDarkA20 = Color(0x44243757);
   static const neutralDarkA10 = Color(0x1A243757);
 
+  /// NeutralVarient
+  static const neutralDarkVarient = Color(0xFF555555);
+  static const neutralDarkVarientA50 = Color(0x80555555);
+  static const neutralDarkVarientA30 = Color(0x4D555555);
+  static const neutralDarkVarientA20 = Color(0x44555555);
+  static const neutralDarkVarientA10 = Color(0x1A555555);
+
   /// Warning
   static const warning = Color(0xFFF1B135);
   static const warningA50 = Color(0x80F1B135);

@@ -26,6 +26,7 @@ dependencies:
 
   flutter_multi_formatter: ^2.7.4
   native_flutter_proxy: ^0.1.15
+  substring_kmp_search: ^0.0.3
   permission_handler: ^10.2.0
   copy_with_extension: ^5.0.3
   shared_preferences: ^2.0.15

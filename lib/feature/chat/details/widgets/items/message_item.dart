@@ -1,10 +1,12 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:weather/core/models/message/message.dart';
 import 'package:weather/theme/items/message_item.dart';
 
 class ContentDetailsItem extends StatelessWidget {
   //
-
   final Message message;
 
   const ContentDetailsItem({
@@ -19,7 +21,6 @@ class ContentDetailsItem extends StatelessWidget {
       text: message.text,
       name: message.name,
       sentTime: message.dateSt,
-
     );
   }
 }

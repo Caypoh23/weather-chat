@@ -1,6 +1,8 @@
 // Package imports:
 import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+// Project imports:
 import 'package:weather/utils/date_formatter.dart';
 
 part 'message.g.dart';

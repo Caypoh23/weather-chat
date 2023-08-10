@@ -1,8 +1,8 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:weather/core/models/message/message.dart';
 
 // Project imports:
+import 'package:weather/core/models/message/message.dart';
 import 'package:weather/feature/chat/chats/chats_page.dart';
 import 'package:weather/feature/chat/details/chat_details_page.dart';
 import 'package:weather/feature/shared/error/error_page.dart';

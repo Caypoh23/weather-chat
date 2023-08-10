@@ -1,10 +1,11 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/core/models/message/message.dart';
 import 'package:weather/theme/default/default_app_bar.dart';
 import 'package:weather/theme/gestures/focus_remover.dart';
-
 import 'widgets/content.dart';
 
 class ChatDetailsPage extends StatefulWidget {

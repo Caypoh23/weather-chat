@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 // Package imports:
 import 'package:badges/badges.dart' as badge;
+
+// Project imports:
 import 'package:weather/conf/enums/theme_colors_enum.dart';
 import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/conf/values/edge_insets_constants.dart';
