@@ -32,6 +32,9 @@ class MyDateFormatter {
 
   static String fdMMMM(DateTime? date) => format(date, MyDateFormats.dMMMM);
 
+  static String fdMMMMyyyy(DateTime? date) =>
+      format(date, MyDateFormats.dMMMMyyyy);
+
   ///
   static String fddMMyy(DateTime? date) => format(date, MyDateFormats.ddMMyy);
 

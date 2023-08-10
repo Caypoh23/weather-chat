@@ -1,7 +1,10 @@
-// Package imports:
+// Dart imports:
 import 'dart:async';
 
+// Package imports:
 import 'package:mobx/mobx.dart';
+
+// Project imports:
 import 'package:weather/conf/enums/menu_enum.dart';
 
 part 'store.g.dart';

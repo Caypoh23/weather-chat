@@ -32,12 +32,12 @@ class MyIcons {
   /// Menu
   ///
 
-  static const docsOn = '${MyAssets.icMenu}/docs_on.svg';
-  static const docsOff = '${MyAssets.icMenu}/docs_off.svg';
+  static const otherOn = '${MyAssets.icMenu}/other_on.svg';
+  static const otherOff = '${MyAssets.icMenu}/other_off.svg';
   static const homeOn = '${MyAssets.icMenu}/home_on.svg';
   static const homeOff = '${MyAssets.icMenu}/home_off.svg';
   static const profileOn = '${MyAssets.icMenu}/profile_on.svg';
   static const profileOff = '${MyAssets.icMenu}/profile_off.svg';
-  static const financesOn = '${MyAssets.icMenu}/finances_on.svg';
-  static const financesOff = '${MyAssets.icMenu}/finances_off.svg';
+  static const chatsOn = '${MyAssets.icMenu}/chats_on.svg';
+  static const chatsOff = '${MyAssets.icMenu}/chats_off.svg';
 }

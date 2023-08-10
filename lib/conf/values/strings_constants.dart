@@ -18,6 +18,14 @@ class MyStrings {
   static String get success => 'success'.tr();
 
   ///
+  ///Menu
+  ///
+  static String get weather => 'weather'.tr();
+  static String get other => 'other'.tr();
+  static String get chats => 'chats'.tr();
+  static String get profile => 'profile'.tr();
+
+  ///
   /// Permissions
   ///
   static String get grantPermission => 'grantPermission'.tr();
@@ -30,11 +38,18 @@ class MyStrings {
 
   static String get hide => 'hide'.tr();
 
+  static String get support => 'support'.tr();
+
   ///
   /// Time
   ///
   static String get h => 'h'.tr();
   static String get m => 'n'.tr();
+
+  ///
+  /// Weather
+  ///
+  static String get searchByCity => 'searchByCity'.tr();
 
   ///
   /// Chat
@@ -48,4 +63,6 @@ class MyStrings {
   static String get offline => 'offline'.tr();
 
   static String get openTemper => 'openTemper'.tr();
+
+  static String get updatingWeather => 'updatingWeather'.tr();
 }

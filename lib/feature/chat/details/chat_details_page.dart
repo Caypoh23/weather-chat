@@ -1,16 +1,20 @@
 // Flutter imports:
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+// Package imports:
+import 'package:auto_route/auto_route.dart';
 
 // Project imports:
 import 'package:weather/conf/values/color_constants.dart';
+import 'package:weather/conf/values/system_ui_overlay_style_constants.dart';
 import 'package:weather/core/models/chat/chat.dart';
 import 'package:weather/theme/default/default_app_bar.dart';
 import 'package:weather/theme/gestures/focus_remover.dart';
 import 'widgets/content.dart';
 
 @RoutePage()
-class ChatDetailsPage extends StatefulWidget {
+class ChatDetailsPage extends StatelessWidget {
   //
   final Chat chat;
 
@@ -20,19 +24,17 @@ class ChatDetailsPage extends StatefulWidget {
   });
 
   @override
-  State<ChatDetailsPage> createState() => _ChatDetailsPageState();
-}
-
-class _ChatDetailsPageState extends State<ChatDetailsPage> {
-  @override
   Widget build(BuildContext context) {
     return MyFocusRemover(
       child: Scaffold(
         backgroundColor: MyColors.white,
         appBar: MyAppBar(
-          title: widget.chat.messages!.last.name!,
+          title: chat.otherName,
         ),
-        body: const ChatDetailsContent(),
+        body: AnnotatedRegion<SystemUiOverlayStyle>(
+          value: MySystemUiOverlayStyle.lightNavBar,
+          child: ChatDetailsContent(messages: chat.messages ?? []),
+        ),
       ),
     );
   }

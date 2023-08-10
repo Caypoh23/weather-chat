@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 
 // Package imports:
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
-import 'package:weather/conf/enums/menu_enum.dart';
 
 // Project imports:
+import 'package:weather/conf/enums/menu_enum.dart';
 import 'package:weather/feature/home/mobx/store.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:weather/theme/default/default_indexed_stack.dart';
 
 class HomeContent extends StatelessWidget {

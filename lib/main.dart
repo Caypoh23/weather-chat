@@ -19,7 +19,7 @@ const env = Env.prod;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  SystemChrome.setSystemUIOverlayStyle(MySystemUiOverlayStyle.lightNavBar);
+  SystemChrome.setSystemUIOverlayStyle(MySystemUiOverlayStyle.splash);
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   await EasyLocalization.ensureInitialized();

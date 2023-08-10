@@ -7,7 +7,7 @@ import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/conf/values/system_ui_overlay_style_constants.dart';
 import 'package:weather/core/root/injector.dart';
 import 'package:weather/core/router/navigator_service.dart';
-import 'package:weather/theme/text/text24/text_24_semi_bold.dart';
+import 'package:weather/theme/text/text24/text_24_bold.dart';
 import 'package:weather/utils/media_helper.dart';
 import 'default_container.dart';
 import 'default_gesture.dart';
@@ -53,7 +53,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              MyText24s(
+              MyText24b(
                 title,
                 isOverflow: true,
                 color: MyColors.neutralDark,

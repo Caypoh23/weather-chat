@@ -28,8 +28,8 @@ class StickyDateHeader extends StatelessWidget {
     return StickyHeader(
       content: child,
       header: MyContainer(
-        padding: MyEdgeInsets.top16,
         alignment: Alignment.center,
+        margin: MyEdgeInsets.v12,
         child: MyText16s(
           MyDateFormatter.fdMMMM(date),
           color: MyColors.neutralDark,

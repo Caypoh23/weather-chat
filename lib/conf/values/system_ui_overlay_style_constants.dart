@@ -39,6 +39,13 @@ class MySystemUiOverlayStyle {
     systemNavigationBarIconBrightness: Brightness.dark,
   );
 
+  static const greyNavBar = SystemUiOverlayStyle(
+    systemNavigationBarContrastEnforced: false,
+    systemNavigationBarIconBrightness: Brightness.dark,
+    systemNavigationBarColor: MyColors.neutralLite,
+    systemNavigationBarDividerColor: MyColors.neutralLite,
+  );
+
   static const darkNavBar = SystemUiOverlayStyle(
     systemNavigationBarContrastEnforced: false,
     systemNavigationBarIconBrightness: Brightness.light,

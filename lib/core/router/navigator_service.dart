@@ -1,15 +1,18 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
+// Package imports:
 import 'package:auto_route/auto_route.dart';
 import 'package:flash/flash.dart';
 import 'package:injectable/injectable.dart';
+
+// Project imports:
 import 'package:weather/conf/enums/alert_type_enum.dart';
 import 'package:weather/conf/values/border_radius_constants.dart';
 import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/conf/values/duration_constants.dart';
 import 'package:weather/feature/pop_ups/base_detail.dart';
-
 import 'app_router.dart';
 
 @singleton

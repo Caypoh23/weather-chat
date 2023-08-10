@@ -10,14 +10,14 @@ import 'package:weather/conf/values/duration_constants.dart';
 import 'package:weather/conf/values/edge_insets_constants.dart';
 import 'package:weather/theme/text_fields/search_text_field.dart';
 
-class ChatsSearchField extends StatefulWidget {
-  const ChatsSearchField({super.key});
+class ChatsAppBar extends StatefulWidget {
+  const ChatsAppBar({super.key});
 
   @override
-  State<ChatsSearchField> createState() => _ChatsSearchFieldState();
+  State<ChatsAppBar> createState() => _ChatsAppBarState();
 }
 
-class _ChatsSearchFieldState extends State<ChatsSearchField> {
+class _ChatsAppBarState extends State<ChatsAppBar> {
   //
   Timer? timer;
 

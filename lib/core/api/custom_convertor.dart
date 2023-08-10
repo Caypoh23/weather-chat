@@ -5,12 +5,12 @@ import 'dart:async';
 import 'package:chopper/chopper.dart';
 
 // Project imports:
-import 'package:weather/core/models/app_version/app_version.dart';
+import 'package:weather/core/models/weather/weather.dart';
 
 typedef JsonFactory<T> = T Function(Map<String, dynamic> json);
 
 const factories = {
-  AppVersion: AppVersion.fromJson,
+  Weather: Weather.fromJson,
   //
 };
 

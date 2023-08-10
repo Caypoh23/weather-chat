@@ -43,47 +43,52 @@ class BaseDetail extends StatelessWidget {
       minimum: MyEdgeInsets.bottom32,
       child: MyGestureDetector(
         onTap: onTap,
-        child: MyContainer(
-          color: color,
-          margin: MyEdgeInsets.h16,
-          padding: MyEdgeInsets.all16,
-          border: Border.all(color: borderColor),
-          borderRadius: MyBorderRadius.allRounded10,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              MyIcon(
-                size: 24,
-                icon: icon,
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    MyText16m(
-                      title,
-                      color: MyColors.neutral,
+        child: Column(
+          children: [
+            const Spacer(),
+            MyContainer(
+              color: MyColors.white,
+              margin: MyEdgeInsets.all16,
+              padding: MyEdgeInsets.all16,
+              border: Border.all(color: borderColor),
+              borderRadius: MyBorderRadius.allRounded10,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  MyIcon(
+                    size: 24,
+                    icon: icon,
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        MyText16m(
+                          title,
+                          color: MyColors.black,
+                        ),
+                        if (description.isNotEmpty) ...[
+                          const SizedBox(height: 8),
+                          MyText14(
+                            description,
+                            isOverflow: false,
+                            color: MyColors.black,
+                          ),
+                        ],
+                      ],
                     ),
-                    if (description.isNotEmpty) ...[
-                      const SizedBox(height: 8),
-                      MyText14(
-                        description,
-                        isOverflow: false,
-                        color: MyColors.neutral,
-                      ),
-                    ],
-                  ],
-                ),
+                  ),
+                  const SizedBox(width: 12),
+                  MyIcon(
+                    onTap: onClose,
+                    icon: MyIcons.close,
+                  ),
+                ],
               ),
-              const SizedBox(width: 12),
-              MyIcon(
-                onTap: onClose,
-                icon: MyIcons.close,
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -1,10 +1,14 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:auto_route/auto_route.dart';
+
+// Project imports:
 import 'package:weather/core/models/chat/chat.dart';
 import 'package:weather/feature/chat/details/chat_details_page.dart';
 import 'package:weather/feature/home/home_page.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:weather/feature/splash/splash_page.dart';
-
 import 'routes.dart';
 
 part 'app_router.gr.dart';

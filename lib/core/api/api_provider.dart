@@ -4,7 +4,7 @@ import 'package:injectable/injectable.dart';
 
 // Project imports:
 import 'package:weather/conf/api/url_constants.dart';
-import 'app/app_api.dart';
+import 'package:weather/core/api/weather/weather_api.dart';
 import 'custom_convertor.dart';
 
 @singleton
@@ -13,7 +13,7 @@ class ApiProvider {
   late ChopperClient _client;
 
   //
-  late AppApi appApi;
+  late WeatherApi weatherApi;
 
   //
   ApiProvider() {
@@ -25,7 +25,7 @@ class ApiProvider {
       //
       services: [
         //
-        AppApi.create(),
+        WeatherApi.create(),
       ],
       //
       converter: MyJsonConverter(),
@@ -34,7 +34,7 @@ class ApiProvider {
 
     //
 
-    appApi = _client.getService<AppApi>();
+    weatherApi = _client.getService<WeatherApi>();
   }
 
   //

@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:weather/conf/assets/icon_constants.dart';
+import 'package:weather/conf/values/strings_constants.dart';
 import 'package:weather/feature/chat/chats/chats_page.dart';
 import 'package:weather/feature/weather/weather_page.dart';
-import 'package:weather/theme/text/text14/text_14_medium.dart';
+import 'package:weather/theme/container/empty_container.dart';
 
 enum Menu {
   weather,
@@ -21,9 +22,9 @@ extension MenuExtension on Menu {
       case Menu.weather:
         return MyIcons.homeOn;
       case Menu.empty:
-        return MyIcons.docsOn;
+        return MyIcons.otherOn;
       case Menu.chats:
-        return MyIcons.financesOn;
+        return MyIcons.chatsOn;
       case Menu.profile:
         return MyIcons.profileOn;
       default:
@@ -37,10 +38,10 @@ extension MenuExtension on Menu {
         return MyIcons.homeOff;
 
       case Menu.empty:
-        return MyIcons.docsOff;
+        return MyIcons.otherOff;
 
       case Menu.chats:
-        return MyIcons.financesOff;
+        return MyIcons.chatsOff;
 
       case Menu.profile:
         return MyIcons.profileOff;
@@ -53,15 +54,15 @@ extension MenuExtension on Menu {
   String get title {
     switch (this) {
       case Menu.weather:
-        return 'Weather';
+        return MyStrings.weather;
       case Menu.empty:
-        return 'Empty';
+        return MyStrings.other;
       case Menu.chats:
-        return 'Chats';
+        return MyStrings.chats;
       case Menu.profile:
-        return 'Profile';
+        return MyStrings.profile;
       default:
-        return 'Weather';
+        return MyStrings.weather;
     }
   }
 
@@ -70,12 +71,38 @@ extension MenuExtension on Menu {
       case Menu.weather:
         return const WeatherPage();
       case Menu.empty:
-        return const MyText14m('empty');
+        return const EmptyContainer();
       case Menu.chats:
         return const ChatsPage();
 
       case Menu.profile:
-        return const MyText14m('profile');
+        return const EmptyContainer();
+    }
+  }
+
+  Stream get counterStream {
+    switch (this) {
+      case Menu.weather:
+        return const Stream.empty();
+      case Menu.empty:
+        return Stream.value(5);
+      case Menu.chats:
+        return const Stream.empty();
+      case Menu.profile:
+        return const Stream.empty();
+    }
+  }
+
+  int get counter {
+    switch (this) {
+      case Menu.weather:
+        return 0;
+      case Menu.empty:
+        return 5;
+      case Menu.chats:
+        return 0;
+      case Menu.profile:
+        return 0;
     }
   }
 }

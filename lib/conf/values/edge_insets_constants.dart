@@ -31,15 +31,15 @@ class MyEdgeInsets {
   static const v16 = EdgeInsets.symmetric(vertical: 16);
   static const v24 = EdgeInsets.symmetric(vertical: 24);
 
-  static const h2 = EdgeInsets.symmetric(vertical: 2);
-  static const h4 = EdgeInsets.symmetric(vertical: 4);
-  static const h6 = EdgeInsets.symmetric(vertical: 6);
-  static const h8 = EdgeInsets.symmetric(vertical: 8);
-  static const h10 = EdgeInsets.symmetric(vertical: 10);
-  static const h12 = EdgeInsets.symmetric(vertical: 12);
-  static const h14 = EdgeInsets.symmetric(vertical: 14);
-  static const h16 = EdgeInsets.symmetric(vertical: 16);
-  static const h24 = EdgeInsets.symmetric(vertical: 24);
+  static const h2 = EdgeInsets.symmetric(horizontal: 2);
+  static const h4 = EdgeInsets.symmetric(horizontal: 4);
+  static const h6 = EdgeInsets.symmetric(horizontal: 6);
+  static const h8 = EdgeInsets.symmetric(horizontal: 8);
+  static const h10 = EdgeInsets.symmetric(horizontal: 10);
+  static const h12 = EdgeInsets.symmetric(horizontal: 12);
+  static const h14 = EdgeInsets.symmetric(horizontal: 14);
+  static const h16 = EdgeInsets.symmetric(horizontal: 16);
+  static const h24 = EdgeInsets.symmetric(horizontal: 24);
 
   ///
   /// Only

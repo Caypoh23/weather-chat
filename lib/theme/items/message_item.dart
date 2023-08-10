@@ -3,18 +3,20 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:weather/conf/assets/icon_constants.dart';
+import 'package:weather/conf/assets/image_constants.dart';
 import 'package:weather/conf/values/border_radius_constants.dart';
 import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/conf/values/edge_insets_constants.dart';
 import 'package:weather/conf/values/space.dart';
-import 'package:weather/theme/container/my_info_container.dart';
+import 'package:weather/conf/values/strings_constants.dart';
 import 'package:weather/theme/default/default_container.dart';
 import 'package:weather/theme/default/default_icon.dart';
+import 'package:weather/theme/default/default_inkwell.dart';
 import 'package:weather/theme/text/text12/text_12_medium.dart';
 import 'package:weather/theme/text/text14/text_14.dart';
 import 'package:weather/theme/text/text16/text_16_medium.dart';
 
-class MessageItem extends StatelessWidget {
+class MyMessageItem extends StatelessWidget {
   //
   final Function()? onTap;
 
@@ -27,33 +29,42 @@ class MessageItem extends StatelessWidget {
   final int? unreadMessageCount;
 
   final bool isRead;
+  final bool isSupport;
+  final bool isLast;
 
-  const MessageItem({
+  const MyMessageItem({
     super.key,
     required this.imgUrl,
     required this.name,
     required this.text,
     required this.sentTime,
-    this.unreadMessageCount = 0,
     //
+    this.unreadMessageCount = 0,
+    this.isSupport = false,
     this.isRead = true,
+    this.isLast = false,
     this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return MyInfoContainer(
+    return MyInkWell(
       onTap: onTap,
-      showBorder: true,
-      margin: MyEdgeInsets.bottom10,
-      borderColor: MyColors.neutral,
-      color: isRead ? MyColors.neutralLite : MyColors.yellow,
+      borderRadius: MyBorderRadius.allRounded10,
+      border: Border.all(color: MyColors.neutral),
+      padding: MyEdgeInsets.all18,
+      margin: isLast ? MyEdgeInsets.zero : MyEdgeInsets.bottom10,
+      color: isRead
+          ? MyColors.white
+          : isSupport
+              ? MyColors.yellow
+              : MyColors.neutralLite,
       child: Row(
         children: [
           ClipRRect(
             borderRadius: MyBorderRadius.allRounded100,
             child: Image.asset(
-              imgUrl ?? '',
+              isSupport ? MyImages.supportAvatar : imgUrl ?? '',
               width: 53,
               height: 53,
             ),
@@ -65,7 +76,9 @@ class MessageItem extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Expanded(child: MyText16m(name ?? '')),
+                    Expanded(
+                        child: MyText16m(
+                            isSupport ? MyStrings.support : name ?? '')),
                     Space.v4,
                     MyText14(sentTime ?? ''),
                   ],
@@ -73,25 +86,37 @@ class MessageItem extends StatelessWidget {
                 Space.v4,
                 Row(
                   children: [
-                    Expanded(child: MyText14(text ?? '')),
+                    Expanded(
+                        child: MyText14(
+                      text ?? '',
+                      maxLines: 5,
+                    )),
+                    Space.h16,
                     if (isRead) ...[
                       const MyIcon(
                         size: 16,
                         icon: MyIcons.doubleTick,
                       ),
                     ] else ...[
-                      MyContainer(
-                        width: 16,
-                        height: 16,
-                        color: MyColors.blue,
-                        alignment: Alignment.center,
-                        borderRadius: MyBorderRadius.allRounded100,
-                        child: MyText12m(
-                          '$unreadMessageCount',
-                          color: MyColors.white,
-                          textAlign: TextAlign.center,
+                      if (unreadMessageCount! > 0) ...[
+                        MyContainer(
+                          width: 16,
+                          height: 16,
+                          color: MyColors.blue,
+                          alignment: Alignment.center,
+                          borderRadius: MyBorderRadius.allRounded100,
+                          child: MyText12m(
+                            '$unreadMessageCount',
+                            color: MyColors.white,
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                      ),
+                      ] else ...[
+                        const MyIcon(
+                          size: 16,
+                          icon: MyIcons.tick,
+                        ),
+                      ]
                     ],
                   ],
                 ),

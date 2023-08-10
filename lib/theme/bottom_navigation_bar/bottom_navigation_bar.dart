@@ -1,10 +1,10 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:weather/conf/enums/menu_enum.dart';
 import 'package:weather/conf/values/color_constants.dart';
 import 'package:weather/theme/default/default_container.dart';
-
-// Project imports:
 import 'bottom_navigation_bar_item.dart';
 
 class MyBottomNavigationBar extends StatelessWidget {
@@ -43,8 +43,7 @@ class MyBottomNavigationBar extends StatelessWidget {
     }
 
     return MyContainer(
-      color: MyColors.white,
-      border: const Border(top: BorderSide(color: MyColors.neutral)),
+      color: MyColors.neutralLite,
       child: BottomNavigationBar(
         items: items,
         onTap: onTap,
