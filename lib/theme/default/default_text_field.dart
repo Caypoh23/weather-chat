@@ -234,7 +234,7 @@ class _MyTextFieldState extends State<MyTextField> {
       fontSize: 16,
       fontWeight: FontWeight.w500,
       decoration: TextDecoration.none,
-      color: widget.enabled ? MyColors.neutral : MyColors.neutralDark,
+      color: widget.enabled ? MyColors.black : MyColors.black,
     );
   }
 

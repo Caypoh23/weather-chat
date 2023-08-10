@@ -143,6 +143,14 @@ class MyEdgeInsets {
   );
 
   ///
+  ///  h20v
+  ///
+  static const h20v8 = EdgeInsets.symmetric(
+    horizontal: 20,
+    vertical: 8,
+  );
+
+  ///
   /// h32v
   ///
 

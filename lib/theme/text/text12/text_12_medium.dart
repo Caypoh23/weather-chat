@@ -24,7 +24,8 @@ class MyText12m extends StatelessWidget {
   final bool capitalize;
 
   const MyText12m(
-    this.data, {super.key, 
+    this.data, {
+    super.key,
     this.height = 15,
     //
     this.color,

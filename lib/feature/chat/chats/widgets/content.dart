@@ -39,7 +39,7 @@ class _ChatsContentState extends State<ChatsContent> {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: MyEdgeInsets.all16,
+      padding: MyEdgeInsets.all16.copyWith(top: 0),
       children: [
         const ChatSearchField(),
         Space.v16,

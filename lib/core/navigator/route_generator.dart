@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:weather/core/models/message/message.dart';
 
 // Project imports:
 import 'package:weather/feature/chat/chats/chats_page.dart';
@@ -57,7 +58,7 @@ class RouteGenerator {
   //
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    // final args = settings.arguments;
+    final args = settings.arguments;
 
     switch (settings.name) {
       ///
@@ -86,10 +87,13 @@ class RouteGenerator {
         );
 
       case MyRoutes.chatDetails:
-        return route(
-          settings.name,
-          const ChatDetailsPage(),
-        );
+        if (args is Message) {
+          return route(
+            settings.name,
+            ChatDetailsPage(message: args),
+          );
+        }
+        return _errorRoute();
 
       ///
 

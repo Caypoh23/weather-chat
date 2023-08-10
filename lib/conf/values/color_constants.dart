@@ -93,6 +93,13 @@ class MyColors {
   static const blueLiteA20 = Color(0x44EBF7FD);
   static const blueLiteA10 = Color(0x1AEBF7FD);
 
+  /// Yellow
+  static const yellow = Color(0xFFF9FCEE);
+  static const yellowA50 = Color(0x80F9FCEE);
+  static const yellowA30 = Color(0x4DF9FCEE);
+  static const yellowA20 = Color(0x44F9FCEE);
+  static const yellowA10 = Color(0x1AF9FCEE);
+
   /// Other
   static const transparent = Color(0x00FFFFFF);
   static const shrimmer = Color(0xFFFAFAFB);

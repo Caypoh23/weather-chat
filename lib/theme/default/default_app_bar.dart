@@ -1,16 +1,13 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 // Project imports:
 import 'package:weather/conf/assets/icon_constants.dart';
 import 'package:weather/conf/enums/theme_colors_enum.dart';
-import 'package:weather/conf/values/border_radius_constants.dart';
 import 'package:weather/conf/values/color_constants.dart';
-import 'package:weather/conf/values/edge_insets_constants.dart';
+import 'package:weather/conf/values/system_ui_overlay_style_constants.dart';
 import 'package:weather/core/root/injector.dart';
 import 'package:weather/core/root/navigator_service.dart';
-import 'package:weather/theme/default/default_inkwell.dart';
 import 'package:weather/theme/text/text24/text_24_semi_bold.dart';
 import 'package:weather/utils/media_helper.dart';
 import 'default_container.dart';
@@ -41,26 +38,15 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         elevation: 0.0,
         actions: actions,
-        leadingWidth: 40,
         centerTitle: true,
         backgroundColor: MyColors.white,
-        systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: MyColors.transparent,
-          statusBarBrightness: Brightness.light,
-          statusBarIconBrightness: Brightness.dark,
-          systemStatusBarContrastEnforced: false,
-        ),
+        systemOverlayStyle: MySystemUiOverlayStyle.darkStatusBar,
         automaticallyImplyLeading: false,
         leading: canPop
-            ? MyInkWell(
-                color: MyColors.neutral,
-                padding: MyEdgeInsets.all8,
-                borderRadius: MyBorderRadius.allRounded10,
-                onTap: onPop ?? injector<NavigatorService>().pop,
-                child: const MyIcon(
-                  size: 18,
-                  icon: MyIcons.arrowLeft,
-                ),
+            ? MyIcon(
+                size: 18,
+                icon: MyIcons.arrowLeft,
+                onTap: injector<NavigatorService>().pop,
               )
             : null,
         title: MyGestureDetector(

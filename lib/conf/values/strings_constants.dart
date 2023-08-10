@@ -40,5 +40,12 @@ class MyStrings {
   /// Chat
   ///
   static String get chat => 'chat'.tr();
-  static String get searchInChat => 'chatWith'.tr();
+  static String get searchInChat => 'searchInChat'.tr();
+
+  static String get message => 'message'.tr();
+
+  static String get online => 'online'.tr();
+  static String get offline => 'offline'.tr();
+
+  static String get openTemper => 'openTemper'.tr();
 }

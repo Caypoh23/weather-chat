@@ -25,6 +25,13 @@ class MySystemUiOverlayStyle {
     statusBarIconBrightness: Brightness.light,
   );
 
+  static const darkStatusBar = SystemUiOverlayStyle(
+    statusBarColor: MyColors.transparent,
+    statusBarBrightness: Brightness.light,
+    statusBarIconBrightness: Brightness.dark,
+    systemStatusBarContrastEnforced: false,
+  );
+
   static const lightNavBar = SystemUiOverlayStyle(
     systemNavigationBarColor: MyColors.white,
     systemNavigationBarContrastEnforced: false,

@@ -29,7 +29,7 @@ dependencies:
   permission_handler: ^10.2.0
   copy_with_extension: ^5.0.3
   shared_preferences: ^2.0.15
-  package_info_plus: ^4.0.2
+  sticky_headers: ^0.3.0+2
   url_launcher: ^6.1.6
   collection: ^1.16.0
   logging: ^1.2.0
@@ -91,13 +91,13 @@ flutter:
     - assets/translations/
 
   fonts:
-    - family: Golos
+    - family: Gilroy
       fonts:
-        - asset: assets/fonts/Golos-Regular.ttf
+        - asset: assets/fonts/Gilroy-Regular.ttf
           weight: 400
-        - asset: assets/fonts/Golos-Medium.ttf
+        - asset: assets/fonts/Gilroy-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Golos-Semi-Bold.ttf
+        - asset: assets/fonts/Gilroy-SemiBold.ttf
           weight: 600
-        - asset: assets/fonts/Golos-Bold.ttf
+        - asset: assets/fonts/Gilroy-Bold.ttf
           weight: 700
